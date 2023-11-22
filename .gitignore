@@ -1,2 +1,2 @@
 db.sqlite3
-hotelapp/pycache/*
+hotelapp/__pycache__/*
