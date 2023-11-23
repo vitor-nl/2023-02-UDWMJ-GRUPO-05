@@ -4,7 +4,7 @@ from categoriaquarto.models import Categoriaquarto
 
 class Quarto(models.Model):
     numero = models.CharField(max_length=10)
-    categoria = models.ForeignKey(Categoriaquarto, on_delete=models.CASCADE)
+    categoriaquarto = models.ForeignKey(Categoriaquarto, on_delete=models.CASCADE)
     disponivel = models.BooleanField(default=True)
 
     class Meta:
