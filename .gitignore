@@ -1,2 +1,4 @@
 db.sqlite3
 hotelapp/__pycache__/*
+/apps/categoriaquarto/__pycache__/*
+/apps/categoriaquarto/migrations/*
