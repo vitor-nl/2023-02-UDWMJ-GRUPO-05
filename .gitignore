@@ -4,3 +4,7 @@ hotelapp/__pycache__/*
 /apps/categoriaquarto/migrations/*
 /apps/quarto/__pycache__/*
 /apps/quarto/migrations/*
+/apps/servicoadicional/__pycache__/*
+/apps/servicoadicional/migrations/*
+/apps/cliente/__pycache__/*
+/apps/cliente/migrations/*

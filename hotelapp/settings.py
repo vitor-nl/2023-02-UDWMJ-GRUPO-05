@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'categoriaquarto.apps.CategoriaquartoConfig',
     'quarto.apps.QuartoConfig',
-
+    'servicoadicional.apps.ServicoadicionalConfig',
+    'cliente.apps.ClienteConfig',
 ]
 
 MIDDLEWARE = [

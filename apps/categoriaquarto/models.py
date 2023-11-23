@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Categoriaquarto(models.Model):
-    name = models.CharField('Nome', max_length=50)
-    description = models.TextField('Descricao', max_length=100)
+    nome = models.CharField('Nome', max_length=50)
+    descricao = models.TextField('Descricao', max_length=100)
     
     class Meta:
         verbose_name = 'Categoria quarto'
@@ -12,4 +12,4 @@ class Categoriaquarto(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.name
+        return self.nome
