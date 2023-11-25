@@ -4,4 +4,4 @@ from .models import Servicoadicional
 class ServicoadicionalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Servicoadicional
-        fields = 'all'
+        fields = '__all__'

@@ -4,4 +4,4 @@ from rest_framework import serializers
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
-        fields = 'all'
+        fields = '__all__'

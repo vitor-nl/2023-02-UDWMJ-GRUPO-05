@@ -7,4 +7,4 @@ class QuartoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Quarto
-        fields = 'all'
+        fields = '__all__'
