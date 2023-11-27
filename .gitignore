@@ -8,3 +8,5 @@ hotelapp/__pycache__/*
 /apps/servicoadicional/migrations/*
 /apps/cliente/__pycache__/*
 /apps/cliente/migrations/*
+/apps/reserva/__pycache__/*
+/apps/reserva/migrations/*

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'quarto.apps.QuartoConfig',
     'servicoadicional.apps.ServicoadicionalConfig',
     'cliente.apps.ClienteConfig',
+    'reserva.apps.ReservaConfig',
 ]
 
 MIDDLEWARE = [
