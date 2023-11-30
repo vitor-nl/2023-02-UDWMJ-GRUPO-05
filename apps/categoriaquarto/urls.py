@@ -8,5 +8,8 @@ router = routers.DefaultRouter()
 router.register('categoriaquarto', views.CategoriaquartoViewSet, basename='categoriaquarto')
 
 urlpatterns = [
-    path('', include(router.urls) )
+    path('', views.list_categoriaquarto, name='list_categoriaquarto'),
+    path('adicionar/', views.add_categoriaquarto, name='add_categoriaquarto'),
+    path('editar/<int:id_categoriaquarto>/', views.edit_categoriaquarto, name='edit_categoriaquarto'),
+    path('excluir/<int:id_categoriaquarto>/', views.delete_categoriaquarto, name='delete_categoriaquarto'),
 ]

@@ -8,5 +8,8 @@ router = routers.DefaultRouter()
 router.register('quarto', views.QuartoViewSet, basename='quarto')
 
 urlpatterns = [
-    path('', include(router.urls) )
+    path('', views.list_quarto, name='list_quarto'),
+    path('adicionar/', views.add_quarto, name='add_quarto'),
+    path('editar/<int:id_quarto>/', views.edit_quarto, name='edit_quarto'),
+    path('excluir/<int:id_quarto>/', views.delete_quarto, name='delete_quarto'),
 ]

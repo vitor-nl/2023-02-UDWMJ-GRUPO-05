@@ -3,7 +3,7 @@ from django.db import models
 from categoriaquarto.models import Categoriaquarto
 
 class Quarto(models.Model):
-    numero = models.CharField(max_length=10)
+    numero = models.CharField('numero', max_length=10)
     categoriaquarto = models.ForeignKey(Categoriaquarto, on_delete=models.CASCADE)
     disponivel = models.BooleanField(default=True)
 

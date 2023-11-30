@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Quartos - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+        <h5><b>Lista de Quartos</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <br />
+                    <a href="{% url 'quarto:add_quarto' %}">Cadastro de novo quarto</a>
+                <br />
+                <br />
+                <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for quarto in Quarto %}
+                        <tr>
+                            <th scope="row">{{ quarto.id }}</th>
+                            <td>{{ quarto.numero }}</td>
+                            <td>{{ quarto.categoriaquarto }}</td>
+                            <td>
+                                <a href="{% url 'quarto:edit_quarto' quarto.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            </td>
+                            <td>
+                                <a href="{% url 'quarto:delete_quarto' quarto.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
