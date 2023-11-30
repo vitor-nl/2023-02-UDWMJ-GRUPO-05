@@ -7,3 +7,5 @@ def home(request):
     context = {}
     return render(request, template_name, context)
 
+
+

@@ -1,8 +1,12 @@
 from .models import Reserva
+from cliente.serializer import ClienteSerializer
+from servicoadicional.serializer import ServicoadicionalSerializer
+from quarto.serializer import QuartoSerializer
 from rest_framework import serializers
 from quarto.serializer import QuartoSerializer
 from cliente.serializer import ClienteSerializer
 from servicoadicional.serializer import ServicoadicionalSerializer
+
 
 class ReservaSerializer(serializers.ModelSerializer):
     quarto = QuartoSerializer()

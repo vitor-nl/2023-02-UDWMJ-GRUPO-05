@@ -4,9 +4,6 @@ from rest_framework import routers
 
 app_name = 'categoriaquarto'
 
-router = routers.DefaultRouter()
-router.register('categoriaquarto', views.CategoriaquartoViewSet, basename='categoriaquarto')
-
 urlpatterns = [
     path('', views.list_categoriaquarto, name='list_categoriaquarto'),
     path('adicionar/', views.add_categoriaquarto, name='add_categoriaquarto'),
