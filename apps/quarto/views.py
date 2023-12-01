@@ -1,9 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
-
 from rest_framework import viewsets
-from quarto.models import Quarto
-from quarto.serializer import QuartoSerializer
-from quarto.forms import QuartoForm
+from .models import Quarto
+from .serializer import QuartoSerializer
+from .forms import QuartoForm
 
 class QuartoViewSet(viewsets.ModelViewSet):
     queryset = Quarto.objects.all()
@@ -27,7 +26,7 @@ def list_quarto(request):
     template_name = 'quarto/list_quarto.html'
     quarto = Quarto.objects.filter()
     context = {
-        'quarto': Quarto
+        'quarto': quarto
     }
     return render(request, template_name, context)
 

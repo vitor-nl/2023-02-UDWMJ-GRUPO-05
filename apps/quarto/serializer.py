@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from quarto.models import Quarto
+from .models import Quarto
 from categoriaquarto.serializer import CategoriaquartoSerializer
 
 class QuartoSerializer(serializers.ModelSerializer):

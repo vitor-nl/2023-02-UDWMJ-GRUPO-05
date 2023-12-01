@@ -12,7 +12,7 @@ class Quarto(models.Model):
         verbose_name_plural = 'Quartos'
         ordering =['id']
 
-    def str(self):
+    def __str__(self):
         return f"{self.numero} - {self.categoria}"
 
 # Create your models here.

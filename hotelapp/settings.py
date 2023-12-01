@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'cliente.apps.ClienteConfig',
     'reserva.apps.ReservaConfig',
     'core.apps.CoreConfig',
-    # 'widget_tweaks',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
