@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}
+
+    Adicionar Cliente - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+    <h5><b>Cadastro de Cliente</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                   <label for="{{ form.primeiro_nome.id_for_label }}">Primeiro nome</label>
+                   {{ form.primeiro_nome|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.ultimo_nome.id_for_label }}">Último nome</label>
+                    {{ form.ultimo_nome|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.endereço.id_for_label }}">Endereço</label>
+                    {{ form.endereço|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.numero_telefone.id_for_label }}">Número de telefone</label>
+                    {{ form.numero_telefone|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.email.id_for_label }}">E-mail</label>
+                    {{ form.email|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.genero.id_for_label }}">Gênero</label>
+                    {{ form.genero|add_class:"form-control" }}
+                 </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>       
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
