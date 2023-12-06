@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" />
     <title>{% block title %}Animahotel{% endblock title %}</title>
 </head>
 <body>
@@ -25,7 +26,6 @@
                     <a class="dropdown-item" href="{% url 'quarto:list_quarto' %}">Quartos</a>
                     <a class="dropdown-item" href="{% url 'categoriaquarto:list_categoriaquarto' %}">Categorias de quarto</a>
                     <a class="dropdown-item" href="{% url 'cliente:list_cliente' %}">Cliente</a>
-                    <a class="dropdown-item" href="{% url 'servicoadicional:list_servicoadicional' %}">Serviço adicional</a>
                     <a class="dropdown-item" href="{% url 'reserva:list_reserva' %}">Reserva</a>
                 </div>
             </li>
@@ -42,9 +42,6 @@
     <script src="{% static 'js/jquery-ui.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
-<!-- INICIO: Bloco do Bootstrap a ser incluido -->
-
-<!-- FIM: Bloco do Bootstrap a ser incluido -->
 
 </html>
 

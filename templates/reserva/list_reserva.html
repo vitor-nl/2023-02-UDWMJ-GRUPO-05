@@ -23,7 +23,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Quarto</th>
                     <th scope="col">Cliente</th>
-                    <th scope="col">Serviço Adicional</th>
                     <th scope="col">Data de Check-in</th>
                     <th scope="col">Data de Check-out</th>
                     </tr>
@@ -33,8 +32,7 @@
                         <tr>
                             <th scope="row">{{ reserva.id }}</th>
                             <td>{{ reserva.quarto }}</td>
-                            <td>{{ reserva.cliente }}</td>
-                            <td>{{ reserva.servicoadicional }}</td>
+                            <td>{{ reserva.cliente.primeiro_nome }}</td>
                             <td>{{ reserva.data_checkin }}</td>
                             <td>{{ reserva.data_checkout }}</td>
                             <td>

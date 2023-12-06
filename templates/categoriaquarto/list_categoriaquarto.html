@@ -22,8 +22,8 @@
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Descricao</th>
-                    <th scope="col"></th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Preço</th>
                     <th scope="col"></th>
                     </tr>
                 </thead>
@@ -33,6 +33,7 @@
                             <th scope="row">{{ categoriaquarto.id }}</th>
                             <td>{{ categoriaquarto.nome }}</td>
                             <td>{{ categoriaquarto.descricao }}</td>
+                            <td>R${{ categoriaquarto.preco }}</td>
                             <td>
                                 <a href="{% url 'categoriaquarto:edit_categoriaquarto' categoriaquarto.id %}" class="btn btn-primary btn-sm">Editar</a>
                             </td>

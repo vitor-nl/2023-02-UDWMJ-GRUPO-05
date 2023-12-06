@@ -1,14 +1,13 @@
 from django.db import models
 from cliente.models import Cliente
 from quarto.models import Quarto
-from servicoadicional.models import Servicoadicional
+
 # Create your models here.
 class Reserva(models.Model):
     quarto = models.ForeignKey(Quarto, on_delete=models.CASCADE)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     data_checkin = models.DateField()
     data_checkout = models.DateField()
-    servicoadicional = models.ManyToManyField(Servicoadicional)
 
     class Meta:
         verbose_name = 'reserva'
