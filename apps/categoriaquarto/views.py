@@ -28,7 +28,7 @@ def list_categoriaquarto(request):
     template_name = 'categoriaquarto/list_categoriaquarto.html'
     categoriaquarto = Categoriaquarto.objects.filter()
     context = {
-        'categoriaquarto': categoriaquarto
+        'Categoriaquarto': categoriaquarto
     }
     return render(request, template_name, context)
 

@@ -26,7 +26,7 @@ def list_quarto(request):
     template_name = 'quarto/list_quarto.html'
     quarto = Quarto.objects.filter()
     context = {
-        'quarto': quarto
+        'Quarto': quarto
     }
     return render(request, template_name, context)
 

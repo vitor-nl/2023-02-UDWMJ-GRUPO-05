@@ -27,7 +27,7 @@ def list_cliente(request):
     template_name = 'cliente/list_cliente.html'
     cliente = Cliente.objects.filter()
     context = {
-        'cliente': cliente
+        'Cliente': cliente
     }
     return render(request, template_name, context)
 
