@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %} 
+
+{% block title %}
+
+    Criar Reserva - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+        <br />
+    <h5><b>Cadastro de Reserva</b></h5>
+        <div class="row">
+            <div class ="col-md-12">
+                <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="{{ form.quarto.id_for_label }}">Quarto</label>
+                    {{ form.quarto|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.cliente.id_for_label }}">Cliente</label>
+                    {{ form.cliente|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.servicoadicional.id_for_label }}">Serviço Adicional</label>
+                    {{ form.servicoadicional|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.data_checkin.id_for_label }}">Date de Check-in</label>
+                    {{ form.data_checkin|add_class:"form-control" }}
+                 </div>
+                 <div class="form-group">
+                    <label for="{{ form.checkout.id_for_label }}">Data de check-out</label>
+                    {{ form.data_checkout|add_class:"form-control" }}
+                 </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

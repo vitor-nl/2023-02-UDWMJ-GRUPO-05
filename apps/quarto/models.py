@@ -13,6 +13,4 @@ class Quarto(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return f"{self.numero} - {self.categoria}"
-
-# Create your models here.
+        return f"{self.numero}"
