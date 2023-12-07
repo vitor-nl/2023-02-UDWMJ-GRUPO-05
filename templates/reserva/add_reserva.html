@@ -9,9 +9,12 @@
 
 {% block body %}
 
+<header style="background-color: #331a00; color: #fff; text-align: center; padding: 1rem;">
+    <p>Fazer reserva</p>
+</header>
+
     <div class="container">
         <br />
-    <h5><b>Cadastro de Reserva</b></h5>
         <div class="row">
             <div class ="col-md-12">
                 <form action="" method="POST">
@@ -32,7 +35,7 @@
                     <label for="{{ form.checkout.id_for_label }}">Data de check-out</label>
                     {{ form.data_checkout|add_class:"form-control" }}
                  </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="submit" class="btn btn-outline-success">Salvar</button>
                 </form>
             </div>
         </div>

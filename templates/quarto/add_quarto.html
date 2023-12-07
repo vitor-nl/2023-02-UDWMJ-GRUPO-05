@@ -9,9 +9,12 @@
 
 {% block body %}
 
+<header style="background-color: #331a00; color: #fff; text-align: center; padding: 1rem;">
+    <p>Cadastro de Quarto</p>
+</header>
+
     <div class="container">
         <br />
-    <h5><b>Cadastro de Quarto</b></h5>
         <div class="row">
             <div class ="col-md-12">
                 <form action="" method="POST">
@@ -24,7 +27,7 @@
                     <label for="{{ form.categoriaquarto.id_for_label }}">Categoria de quarto</label>
                     {{ form.categoriaquarto|add_class:"form-control" }}
                  </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>       
+                    <button type="submit" class="btn btn-outline-success">Salvar</button>       
                 </form>
             </div>
         </div>

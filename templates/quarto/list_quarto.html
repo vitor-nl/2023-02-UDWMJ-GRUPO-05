@@ -8,36 +8,37 @@
 
 {% block body %}
 
+<header style="background-color: #331a00; color: #fff; text-align: center; padding: 1rem;">
+    <p>Lista de Quartos</p>
+</header>
+
     <div class="container">
         <br />
-        <h5><b>Lista de Quartos</b></h5>
         <div class="row">
             <div class ="col-md-12">
                 <br />
-                    <a href="{% url 'quarto:add_quarto' %}">Cadastro de novo quarto</a>
+                    <a style="color: #331a00; display: flex; align-items: center; justify-content: center;" href="{% url 'quarto:add_quarto' %}">Cadastro de novo quarto</a>
                 <br />
                 <br />
                 <table class="table table-hover">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Numero</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col" style="color: #331a00;">Numero</th>
+                    <th scope="col" style="color: #331a00;">Categoria</th>
+                    <th scope="col" style="color: #331a00;"></th>
+                    <th scope="col" style="color: #331a00;"></th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for quarto in Quarto %}
                         <tr>
-                            <th scope="row">{{ quarto.id }}</th>
                             <td>{{ quarto.numero }}</td>
                             <td>{{ quarto.categoriaquarto }}</td>
                             <td>
-                                <a href="{% url 'quarto:edit_quarto' quarto.id %}" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="{% url 'quarto:edit_quarto' quarto.id %}" class="btn btn-outline-info">Editar</a>
                             </td>
                             <td>
-                                <a href="{% url 'quarto:delete_quarto' quarto.id %}" class="btn btn-danger btn-sm ">Excluir</a>
+                                <a href="{% url 'quarto:delete_quarto' quarto.id %}" class="btn btn-outline-danger">Excluir</a>
                             </td>
                         </tr> 
                     {% endfor %}
